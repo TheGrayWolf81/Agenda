@@ -11,6 +11,14 @@
         white-space: normal;
       }
       
+      body {
+        background-color: #F2F2F2;
+      }
+      
+      table {
+        background-color: #FCFCFC;
+      }
+      
       .mdl-tabs__tab-bar {
         width: 100vw;
         background-color: #bababa;
@@ -30,8 +38,7 @@
       }
     </style>
   </head>
-  <body style="background-color:#f2f2f2">
-    <center>
+  <body>
     <main class="mdl-layout__content">
       <div id="main" class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
         <div class="mdl-tabs__tab-bar">
@@ -40,7 +47,7 @@
         </div>
 
         <div class="mdl-tabs__panel is-active" id="agenda">
-          <table style="background-color:#fcfcfc" class="mdl-data-table mdl-js-data-table">
+          <table class="mdl-data-table mdl-js-data-table">
             <thead>
               <tr>
                 <th class="mdl-data-table__cell--non-numeric">Class</th>
@@ -89,7 +96,6 @@
         <button id="save" type="button" class="mdl-button">Save</button>
       </div>
     </main>
-      </center>
   </body>
   <script>
   var classes = [
