@@ -17,18 +17,20 @@
       
       table {
         background-color: #FCFCFC;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       }
       
       .mdl-tabs__tab-bar {
         width: 100vw;
         background-color: #bababa;
       }
+      
+      .mdl-tabs__panel {
+        padding: 5vh;
+      }
 
       .mdl-data-table {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 5vh;
-        margin-bottom: 5vh;
+        margin: auto;
       }
 
       .mdl-textfield {
@@ -49,7 +51,7 @@
         </div>
 
         <div class="mdl-tabs__panel is-active" id="agenda">
-          <table class="mdl-data-table mdl-js-data-table" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">
+          <table class="mdl-data-table mdl-js-data-table">
             <thead>
               <tr>
                 <th class="mdl-data-table__cell--non-numeric">Class</th>
