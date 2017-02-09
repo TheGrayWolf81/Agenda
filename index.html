@@ -15,8 +15,8 @@
       body {
 	background-image: url("appleblurlite.jpg");
 	background-size: cover;
-	opacity: 0.75;
-        filter: alpha(opacity=75); /* For IE8 and earlier */
+	opacity: 0.77;
+        filter: alpha(opacity=50); /* For IE8 and earlier */
 	background-color: #F2F2F2;
       }
       table {
@@ -197,11 +197,14 @@ body {
     classes.forEach(function(item, index, array) {
       HTML += getTableItem(item);
     });
-    document.getElementById("classes").innerHTML = HTML;
+	  
+    var element = document.getElementById("classes");
+    element.innerHTML = HTML;
+    componentHandler.upgradeElement(element);
   }
 
   function getTableItem(item) {
-    return "<tr ondblclick=\"edit(classes[" + classes.indexOf(item) + "]);\"><label class=\"mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect\" for=\"checkbox-" + classes.indexOf(item) + "\"><input type=\"checkbox\" id=\"checkbox-" + classes.indexOf(item) + "\" class=\"mdl-checkbox__input\"/></label><td class=\"mdl-data-table__cell--non-numeric\">" + item.name + "</td><td class=\"mdl-data-table__cell--non-numeric\">" + item.teacher + "</td><td>" + item.room + "</td><td class=\"mdl-data-table__cell--non-numeric\">" + item.homework + "</td></tr>";
+    return "<tr ondblclick=\"edit(classes[" + classes.indexOf(item) + "]);\"><td class=\"mdl-data-table__cell--non-numeric\">" + item.name + "</td><td class=\"mdl-data-table__cell--non-numeric\">" + item.teacher + "</td><td>" + item.room + "</td><td class=\"mdl-data-table__cell--non-numeric\">" + item.homework + "</td></tr>";
   }
 
   function edit(item) {
