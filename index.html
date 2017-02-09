@@ -201,7 +201,7 @@ body {
   }
 
   function getTableItem(item) {
-    return "<tr onclick=\"edit(classes[" + classes.indexOf(item) + "]);\"><td class=\"mdl-data-table__cell--non-numeric\">" + item.name + "</td><td class=\"mdl-data-table__cell--non-numeric\">" + item.teacher + "</td><td>" + item.room + "</td><td class=\"mdl-data-table__cell--non-numeric\">" + item.homework + "</td></tr>";
+    return "<tr ondblclick=\"edit(classes[" + classes.indexOf(item) + "]);\"><td class=\"mdl-data-table__cell--non-numeric\">" + item.name + "</td><td class=\"mdl-data-table__cell--non-numeric\">" + item.teacher + "</td><td>" + item.room + "</td><td class=\"mdl-data-table__cell--non-numeric\">" + item.homework + "</td></tr>";
   }
 
   function edit(item) {
