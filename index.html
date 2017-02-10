@@ -85,11 +85,12 @@ body {
           <br>
           Created by <a href="https://www.youtube.com/channel/UCWa--6L7aAcTJInaX9hh4xg">Richard Yanchev</a> and <a href="https://theandroidmaster.github.io/">James Fenn</a>.
           <br>
-    
-    <div class="mdl-snackbar__text"></div>
-    <button type="button" class="mdl-snackbar__action">Cookies</button>
-
+	</div>
+	<div aria-live="assertive" aria-atomic="true" aria-relevant="text" class="mdl-snackbar mdl-js-snackbar">
+   	 <div class="mdl-snackbar__text"></div>
+    	<button type="button" class="mdl-snackbar__action"></button>
         </div>
+       </div>
 
       <div id="edit" style="display: none;">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -192,11 +193,12 @@ body {
     componentHandler.upgradeElement(element);
   }
 	  
-  var notification = document.querySelector('.mdl-js-snackbar');
+var notification = document.querySelector('.mdl-js-snackbar');
 notification.MaterialSnackbar.showSnackbar(
   {
-    message: 'This site uses cookies to store your input.'
+    message: 'Image Uploaded'
   }
+);
 
   function getTableItem(item) {
     return "<tr ondblclick=\"edit(classes[" + classes.indexOf(item) + "]);\"><td class=\"mdl-data-table__cell--non-numeric\">" + item.name + "</td><td class=\"mdl-data-table__cell--non-numeric\">" + item.teacher + "</td><td>" + item.room + "</td><td class=\"mdl-data-table__cell--non-numeric\">" + item.homework + "</td></tr>";
