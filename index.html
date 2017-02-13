@@ -23,11 +23,6 @@
         background-color: #FCFCFC;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       }
-      
-	    .mdl-chip {
-	    	margin-left: auto;
-                margin-right: auto;
-	    }
 	    
       .mdl-tabs__tab-bar {
         width: 100vw;
@@ -68,6 +63,7 @@ body {
       <div id="main" class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
         <div class="mdl-tabs__tab-bar">
           <a href="#agenda" class="mdl-tabs__tab is-active">Agenda</a>
+	  <a href="#notes" class="mdl-tabs__tab">Notes</a>
           <a href="#about" class="mdl-tabs__tab">About</a>
         </div>
 
@@ -91,8 +87,13 @@ body {
           Created by <a href="https://www.youtube.com/channel/UCWa--6L7aAcTJInaX9hh4xg">Richard Yanchev</a> and <a href="https://theandroidmaster.github.io/">James Fenn</a>.
           <br>
 	</div>
-	      
-     
+	   
+	<div class="mdl-tabs__panel" id="notes">
+		<!-- Basic Chip -->
+		<span class="mdl-chip">
+    			<span class="mdl-chip__text">Notes are coming soon!</span>
+		</span>  
+	</div>
        </div>
 	    
       <div id="edit" style="display: none;">
