@@ -115,8 +115,8 @@ body {
 	  <span class="mdl-layout-title">Settings</span>
 	  <br>
 	  <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch">
-          <input type="checkbox" id="switch" class="mdl-switch__input">
-          <span class="mdl-switch__label">Dark Mode (coming soon)</span>
+          <input type="checkbox" id="switch" class="mdl-switch__input" onclick="comingSoon()">
+          <span class="mdl-switch__label">Dark Mode</span>
           </label>
 	  <br>
 	  <br>
@@ -230,6 +230,10 @@ body {
 
   function resetWarning(){
   	alert("WARNING! This will delete all of your existing data!");
+  }
+	  
+  function comingSoon() {
+  	alert("This function is coming soon!");
   }
 	  
   function getTableItem(item) {
