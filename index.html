@@ -270,6 +270,7 @@ body {
   function saveClasses() {
     if (typeof(Storage) !== "undefined") {
       localStorage.setItem("classes", JSON.stringify(classes));
+      location.reload();
     } else {
       alert("You are not currently using a supported browser. Please update your browser or switch to a less outdated piece of trash.");
     }
