@@ -121,7 +121,7 @@ body {
 	  <br>
 	  <br>
 	  <!-- Raised button with ripple -->
-	  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Reset</button>
+	  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="resetWarning()">Reset</button>
 	  <br>
 	</div>
 	      
@@ -228,6 +228,10 @@ body {
     componentHandler.upgradeElement(element);
   }
 
+  function resetWarning(){
+  	alert("WARNING! This will delete all of your existing data!");
+  }
+	  
   function getTableItem(item) {
     return "<tr ondblclick=\"edit(classes[" + classes.indexOf(item) + "]);\"><td class=\"mdl-data-table__cell--non-numeric\">" + item.name + "</td><td class=\"mdl-data-table__cell--non-numeric\">" + item.teacher + "</td><td>" + item.room + "</td><td class=\"mdl-data-table__cell--non-numeric\">" + item.homework + "</td></tr>";
   }
