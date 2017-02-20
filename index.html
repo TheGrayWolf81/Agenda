@@ -31,7 +31,7 @@
 	    
       .mdl-tabs__tab-bar {
         width: 100vw;
-        background-color: "colorchange";
+        background-color: #FCFCFC;
         box-shadow: 0 0.2px 0.2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       }
       
@@ -124,7 +124,7 @@ body {
 	  <span class="mdl-layout-title">Settings</span>
 	  <br>
 	  <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch">
-          <input type="checkbox" id="switch" class="mdl-switch__input" onclick="comingSoon()">
+          <input type="checkbox" id="switch" class="mdl-switch__input" onclick="changeColor()">
           <span class="mdl-switch__label">Dark Mode</span>
           </label>
 	  <br>
@@ -164,7 +164,6 @@ body {
     </main>
   </body>
   <script>
-	  var colorchange = "#E57373";
   var classes = [
     {
       name: "Period 1",
@@ -247,8 +246,8 @@ body {
 	}
   }
 	  
-  function comingSoon() {
-  	alert("This function is coming soon!");
+  function changeColor() {
+  	.mdl-tabs__tab-bar.style.backgroundColor= "#212121";
   }
 	  
   function getTableItem(item) {
