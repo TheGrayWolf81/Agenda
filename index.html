@@ -238,7 +238,11 @@ body {
   }
 
   function resetWarning(){
-  	alert("WARNING! This will delete all of your existing data!");
+	if (confirm('Are you sure you want to delete all\nexisting data from Agenda?')) {
+    		// Delete it!
+	} else {
+    		// Do nothing!
+	}
   }
 	  
   function comingSoon() {
