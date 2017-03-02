@@ -186,9 +186,9 @@ body {
 	  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="resetWarning()">Reset</button>
 	  <br>
 		
-	  <input type="image" onclick="bgChange()" id="bgChange" src="bmwblur.jpg"/>
-	  <input type="image" onclick="bgChange()" id="bgChange" src="appleblurlite.jpg"/>
-	  <input type="image" onclick="bgChange()" id="bgChange" src="orangeblurlite.jpg"/>
+	  <input type="image" onclick="bgChange()" id="bgBMWblur" src="bmwblur.jpg"/>
+	  <input type="image" onclick="bgChange()" id="bgAppleblurlite" src="appleblurlite.jpg"/>
+	  <input type="image" onclick="bgChange()" id="bgOrangeblurlite" src="orangeblurlite.jpg"/>
 	</div>
 	      
        </div>
@@ -278,8 +278,16 @@ body {
     }
   ];  
 	
-  function bgChange() {
-  	
+  function bgOrangeblurlite() {
+  	document.body.style.backgroundImage = "url('orangeblurlite.png')";
+  }
+	  
+  function bgAppleblurlite() {
+  	document.body.style.backgroundImage = "url('appleblurlite.png')";
+  }
+	  
+  function bgBMWblur() {
+  	document.body.style.backgroundImage = "url('bmwblur.png')";
   }
 	  
   function themeChange() {
