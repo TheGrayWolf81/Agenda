@@ -158,7 +158,7 @@ body {
           Created by <a href="https://www.youtube.com/channel/UCWa--6L7aAcTJInaX9hh4xg">Richard Yanchev</a> and <a href="https://theandroidmaster.github.io/">James Fenn</a>.
           <br>
 	  <br>
-	<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="msgToast(helpToast)">Help</button>
+	<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="helpToast()">Help</button>
 
 	<div id="helpToast">Double click a row on the table to edit its fields.</div>
 	</div>
@@ -179,6 +179,7 @@ body {
 	  <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch">
           <input type="checkbox" id="switch" class="mdl-switch__input" onclick="bgChange()">
           <span class="mdl-switch__label">Dark Mode</span>
+	  <div id="dmodeToast">Theme has changed.</div>
           </label>
 	  <br>
 	  <br>
@@ -189,8 +190,6 @@ body {
 	  <input type="image" onclick="bgBMWblur()" id="bgChange" src="bmwblur.jpg"/>
 	  <input type="image" onclick="bgAppleblurlite()" id="bgChange" src="appleblurlite.jpg"/>
 	  <input type="image" onclick="bgOrangeblurlite()" id="bgChange" src="orangeblurlite.jpg"/>
-	
-		<div id="dmodeToast">Theme has changed.</div>
 	</div>
 	      
        </div>
@@ -294,12 +293,12 @@ body {
 	  
   function bgChange() {
   	$(".mdl-tabs__tab-bar").style.color = "#545556";
-	msgToast(dmodeToast);
+	dmodeToast();
   }
 	  
-  function msgToast(var name) {
+    function helpToast() {
     // Get the snackbar DIV
-    var x = document.getElementById(name)
+    var x = document.getElementById("helpToast")
 
     // Add the "show" class to DIV
     x.className = "show";
@@ -308,7 +307,17 @@ body {
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 	}
 	  
-	  
+    function dmodeToast() {
+    // Get the snackbar DIV
+    var x = document.getElementById("dmodeToast")
+
+    // Add the "show" class to DIV
+    x.className = "show";
+
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+	}
+	   
   function loadClasses() {
     if (typeof(Storage) !== "undefined") {
       var stored = localStorage.getItem("classes");
