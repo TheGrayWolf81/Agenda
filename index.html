@@ -158,9 +158,9 @@ body {
           Created by <a href="https://www.youtube.com/channel/UCWa--6L7aAcTJInaX9hh4xg">Richard Yanchev</a> and <a href="https://theandroidmaster.github.io/">James Fenn</a>.
           <br>
 	  <br>
-	<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="helpToast()">Help</button>
+	<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="msgToast(helpToast)">Help</button>
 
-	<div id="snackbar">Double click a row on the table to edit its fields.</div>
+	<div id="helpToast">Double click a row on the table to edit its fields.</div>
 	</div>
 	   
 	<div class="mdl-tabs__panel" id="notes">
@@ -177,7 +177,7 @@ body {
 	  <span class="mdl-layout-title">Settings</span>
 	  <br>
 	  <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch">
-          <input type="checkbox" id="switch" class="mdl-switch__input" onclick="changeColor()">
+          <input type="checkbox" id="switch" class="mdl-switch__input" onclick="bgChange()">
           <span class="mdl-switch__label">Dark Mode</span>
           </label>
 	  <br>
@@ -189,6 +189,8 @@ body {
 	  <input type="image" onclick="bgBMWblur()" id="bgChange" src="bmwblur.jpg"/>
 	  <input type="image" onclick="bgAppleblurlite()" id="bgChange" src="appleblurlite.jpg"/>
 	  <input type="image" onclick="bgOrangeblurlite()" id="bgChange" src="orangeblurlite.jpg"/>
+	
+		<div id="dmodeToast">Theme has changed.</div>
 	</div>
 	      
        </div>
@@ -290,13 +292,14 @@ body {
   	document.body.style.backgroundImage = "url('bmwblur.png')";
   }
 	  
-  function themeChange() {
+  function bgChange() {
   	$(".mdl-tabs__tab-bar").style.color = "#545556";
+	msgToast(dmodeToast);
   }
 	  
-  function helpToast() {
+  function msgToast(var name) {
     // Get the snackbar DIV
-    var x = document.getElementById("snackbar")
+    var x = document.getElementById(name)
 
     // Add the "show" class to DIV
     x.className = "show";
