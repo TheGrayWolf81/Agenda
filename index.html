@@ -14,7 +14,7 @@
       }
       body {
 	background-image: url("NSTexturedFullScreenBackgroundColor.png");
-	<!-- background-size: cover; --!>
+	<!-- background-size: cover; -->
 	background-repeat: repeat-y;
 	opacity: 0.75;
         filter: alpha(opacity=75); /* For IE8 and earlier */
@@ -186,10 +186,6 @@ body {
 	  <!-- Raised button with ripple -->
 	  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="resetWarning()">Reset</button>
 	  <br>
-		
-	  <input type="image" onclick="bgBMWblur()" id="bgChange" src="bmwblur.jpg"/>
-	  <input type="image" onclick="bgAppleblurlite()" id="bgChange" src="appleblurlite.jpg"/>
-	  <input type="image" onclick="bgOrangeblurlite()" id="bgChange" src="orangeblurlite.jpg"/>
 	</div>
 	      
        </div>
@@ -278,23 +274,6 @@ body {
       homework: ""
     }
   ];  
-	
-  function bgOrangeblurlite() {
-  	document.body.style.backgroundImage = "url('orangeblurlite.png')";
-  }
-	  
-  function bgAppleblurlite() {
-  	document.body.style.backgroundImage = "url('appleblurlite.png')";
-  }
-	  
-  function bgBMWblur() {
-  	document.body.style.backgroundImage = "url('bmwblur.png')";
-  }
-	  
-  function bgChange() {
-  	$(".mdl-tabs__tab-bar").style.color = "#545556";
-	dmodeToast();
-  }
 	  
     function helpToast() {
     // Get the snackbar DIV
