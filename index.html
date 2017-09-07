@@ -176,7 +176,6 @@ body {
 	  <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch">
           <input type="checkbox" id="switch" class="mdl-switch__input" onclick="bgChange()">
           <span class="mdl-switch__label">Dark Mode</span>
-	  <div id="dmodeToast">Theme has changed.</div>
           </label>
 	  <br>
 	  <br>
@@ -271,28 +270,6 @@ body {
       homework: ""
     }
   ];  
-	  
-    function helpToast() {
-    // Get the snackbar DIV
-    var x = document.getElementById("helpToast")
-
-    // Add the "show" class to DIV
-    x.className = "show";
-
-    // After 3 seconds, remove the show class from DIV
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-	}
-	  
-    function dmodeToast() {
-    // Get the snackbar DIV
-    var x = document.getElementById("dmodeToast")
-
-    // Add the "show" class to DIV
-    x.className = "show";
-
-    // After 3 seconds, remove the show class from DIV
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-	}
 	   
   function loadClasses() {
     if (typeof(Storage) !== "undefined") {
