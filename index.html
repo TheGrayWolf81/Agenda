@@ -51,9 +51,6 @@
 	    
       .mdl-button {
 	background-color: ##4cd550;
-	      position; absolute;
-	      bottom: 0;
-	      right: 0;
       }
 
       img {
@@ -73,6 +70,12 @@
       #edit {
         margin: 5vh;
       }
+	    
+	    #addButton {
+	    	position:relative;
+		bottom:0;
+		right:0;
+	    }
       
       @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
 
@@ -124,7 +127,7 @@ body {
             <tbody id="classes"></tbody>
           </table>
 		
-	<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+	<button id=addButton class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
   	<i class="material-icons">add</i>
 	</button>
 		
