@@ -62,7 +62,6 @@
 	    position:fixed;
 		bottom:0;
 		left:0;
-	      	background-color: #47BBF9;
       }
 
       img {
@@ -88,6 +87,10 @@
 		bottom:15;
 		right:15;
 	    }
+	    #cookieChip{
+	    	position:relative;
+		width:50%;
+	    }	    
       
       @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
 
@@ -143,6 +146,14 @@ body {
 	<button id=btnAdd class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
   	<i class="material-icons">add</i>
 	</button>
+	</div>	
+	
+	<div id=cookieChip>	
+	<!-- Deletable Chip -->
+	<span class="mdl-chip mdl-chip--deletable">
+   	 <span class="mdl-chip__text">This site uses cookies to store your input.</span>
+   	 <button type="button" class="mdl-chip__action"><i class="material-icons">cancel</i></button>
+	</span>	
 	</div>	
 		
 	 <!-- Simple MDL Progress Bar -->
