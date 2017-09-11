@@ -27,10 +27,6 @@
         background-color: #FCFCFC;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       }
-	   
-	    .bg {
-	    	background-image: url(image.jpg);
-	    }
 	    
       .info {
        background-color: #FFF9C4;
@@ -302,19 +298,11 @@ body {
     var element = document.getElementById("classes");
     element.innerHTML = HTML;
     componentHandler.upgradeElement(element);
-  }
+  }	  
 	  
-  $(window).scroll(function(){
-    $('#mdl-tabs__tab-bar').css({
-        'left': $(this).scrollLeft() + 15 
-         //Why this 15, because in the CSS, we have set left 15, so as we scroll, we would want this to remain at 15px left
-   	 });
-	});	  
-	  
-  /*function bgChange(){
-  	/*document.getElementById('pageBody').className="bg"+whichImage;
-	  $('body').css('background-image', 'url(image.jpg)');
-  }*/	  
+  function bgChange(){
+  	document.body.style.background = url("image.jpg");
+  }  
 
   function resetWarning(){
 	if (confirm('Are you sure you want to delete all existing data from Agenda?\nThis will delete ALL user input!')) {
