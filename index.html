@@ -76,7 +76,7 @@
         margin: 5vh;
       }
 	    
-	#rowBtn:active {
+	#rowBtn {
 		position:fixed;
 		bottom:0;
 		right:0;
@@ -121,6 +121,8 @@ body {
       
         <div class="mdl-tabs__panel is-active" id="agenda">
           <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable">
+		  <!-- Simple MDL Progress Bar -->
+	<div id="p1" class="mdl-progress mdl-js-progress"></div> 
             <thead>
               <tr>
                 <th class="mdl-data-table__cell--non-numeric">Class</th>
@@ -136,10 +138,7 @@ body {
 	<button id=btnAdd class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
   	<i class="material-icons">add</i>
 	</button>
-	</div>
-		
-	<!-- Simple MDL Progress Bar -->
-	<div id="p1" class="mdl-progress mdl-js-progress"></div> 	
+	</div>	
 		
         </div>     
 	      
