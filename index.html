@@ -88,6 +88,8 @@
 		bottom:15;
 		right:15;
 	    } 
+	    #mdl-tabs__tab-bar{
+	    }
       
       @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
 
@@ -119,7 +121,7 @@ body {
   <body id=pageBody>
     <main class="mdl-layout__content">
       <div id="main" class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-        <div class="mdl-tabs__tab-bar">
+        <div id="mdl-tabs__tab-bar" class="mdl-tabs__tab-bar">
           <a href="#agenda" class="mdl-tabs__tab is-active">Agenda</a>
 	  <!--<a href="#notes" class="mdl-tabs__tab">Notes</a>-->
           <a href="#about" class="mdl-tabs__tab">About</a>
@@ -139,7 +141,7 @@ body {
             <tbody id="classes"></tbody>
           </table>
 	
-	<div id=rowBtn>
+	<div id="rowBtn">
 	<button id=btnAdd class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
   	<i class="material-icons">add</i>
 	</button>
@@ -303,7 +305,7 @@ body {
   }
 	  
   $(window).scroll(function(){
-    $('.mdl-tabs__tab-bar').css({
+    $('#mdl-tabs__tab-bar').css({
         'left': $(this).scrollLeft() + 15 
          //Why this 15, because in the CSS, we have set left 15, so as we scroll, we would want this to remain at 15px left
    	 });
