@@ -302,6 +302,13 @@ body {
     componentHandler.upgradeElement(element);
   }
 	  
+  $(window).scroll(function(){
+    $('.mdl-tabs__tab-bar').css({
+        'left': $(this).scrollLeft() + 15 
+         //Why this 15, because in the CSS, we have set left 15, so as we scroll, we would want this to remain at 15px left
+   	 });
+	});	  
+	  
   /*function bgChange(){
   	/*document.getElementById('pageBody').className="bg"+whichImage;
 	  $('body').css('background-image', 'url(image.jpg)');
