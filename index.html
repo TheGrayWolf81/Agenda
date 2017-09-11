@@ -57,6 +57,12 @@
       .mdl-button {
 	/*background-color: #FF0000;- !*/
       }
+	    
+      .mdl-progress {
+	    position:fixed;
+		bottom:0;
+		left:0;
+      }
 
       img {
 	display: block;
@@ -120,9 +126,7 @@ body {
         </div>
       
         <div class="mdl-tabs__panel is-active" id="agenda">
-          <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable">
-		  <!-- Simple MDL Progress Bar -->
-	<div id="p1" class="mdl-progress mdl-js-progress"></div> 
+          <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable"> 
             <thead>
               <tr>
                 <th class="mdl-data-table__cell--non-numeric">Class</th>
@@ -140,6 +144,8 @@ body {
 	</button>
 	</div>	
 		
+	 <!-- Simple MDL Progress Bar -->
+	<div id="p1" class="mdl-progress mdl-js-progress"></div>	
         </div>     
 	      
         <div class="mdl-tabs__panel" id="about">
