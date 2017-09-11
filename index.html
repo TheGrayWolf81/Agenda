@@ -76,8 +76,8 @@
         margin: 5vh;
       }
 	    
-	#btnAdd:active {
-		position:relative;
+	#rowBtn:active {
+		position:fixed;
 		bottom:0;
 		right:0;
 	    }
@@ -131,15 +131,17 @@ body {
             </thead>
             <tbody id="classes"></tbody>
           </table>
-		
+	
+	<div id=rowBtn>
 	<button id=btnAdd class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
   	<i class="material-icons">add</i>
-	</button>	
+	</button>
+	</div>
 		
-        </div>
-	 
 	<!-- Simple MDL Progress Bar -->
-	<div id="p1" class="mdl-progress mdl-js-progress"></div>      
+	<div id="p1" class="mdl-progress mdl-js-progress"></div> 	
+		
+        </div>     
 	      
         <div class="mdl-tabs__panel" id="about">
           <span class="mdl-layout-title">Agenda</span>
