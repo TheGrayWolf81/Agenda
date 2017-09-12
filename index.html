@@ -13,34 +13,36 @@
       td {
         white-space: normal;
       }
+
       body {
-	background-attachment: fixed;
-	background-image: url("Background.2e16d0ba.fill-1422x800.jpg");
-	background-size: cover;
-	/*background-repeat: repeat-y; */ /*tile background*/
-	background-color: white;
-	opacity: 0.75;
+		background-attachment: fixed;
+	    background-image: url("Background.2e16d0ba.fill-1422x800.jpg");
+	    background-size: cover;
+	    /*background-repeat: repeat-y; */ /*tile background*/
+	    background-color: white;
+	    opacity: 0.75;
         filter: alpha(opacity=75); /* For IE8 and earlier */
-	background-color: #F2F2F2;
+	    background-color: #F2F2F2;
       }
+
       table {
         background-color: #FCFCFC;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       }
-	    
+
       .info {
-       background-color: #FFF9C4;
-       border-left: 6px solid #FFF176;
-	}
-	    
+        background-color: #FFF9C4;
+        border-left: 6px solid #FFF176;
+	  }
+
       .mdl-tabs__tab-bar {
-	position:fixed;
+	    position: fixed;
         width: 100vw;
         background-color: #FCFCFC;
         box-shadow: 0 0.2px 0.2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	z-index:1;
+	    z-index:1;
       }
-      
+
       .mdl-tabs__panel {
         padding: 5vh;
       }
@@ -52,66 +54,81 @@
       .mdl-textfield {
         width: 100%;
       }
-	    
+
       .mdl-button {
-	/*background-color: #FF0000;- !*/
+	    /*background-color: #FF0000;- !*/
       }
-	    
+
       .mdl-progress {
-	    	position:fixed;
+	    position:fixed;
 		bottom:0;
 		left:0;
       }
 
       img {
-	display: block;
+	    display: block;
         margin: auto;
         width: 65%;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       }
-	    
+
       /*#bgChange {
-	display: block;
+	    display: block;
         margin: auto;
         width: 15%;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       }*/
 
       #edit {
         margin: 5vh;
       }
-	    
-	#rowBtn {
-		position:fixed;
-		bottom:15;
-		right:15;
-	    } 
-      
+
+	  #rowBtn {
+		position: fixed;
+		bottom: 15px;
+		right: 15px;
+	  }
+
+	  #agenda {
+		position: fixed;
+		left: 50%;
+		transform: translateX(-50%);
+		padding: 48px 90px;
+		height: calc(100vh - 94px);
+		overflow: scroll;
+	  }
+
+	  @media(max-width: 490px) {
+		#agenda {
+		  padding: 48px 0;
+		  width: 100vw;
+		}
+	  }
+
       @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
 
-@keyframes fadein {
-    from {bottom: 0; opacity: 0;}
-    to {bottom: 30px; opacity: 1;}
-}
+      @keyframes fadein {
+        from {bottom: 0; opacity: 0;}
+        to {bottom: 30px; opacity: 1;}
+      }
 
-@-webkit-keyframes fadeout {
-    from {bottom: 30px; opacity: 1;} 
-    to {bottom: 0; opacity: 0;}
-}
+      @-webkit-keyframes fadeout {
+        from {bottom: 30px; opacity: 1;}
+        to {bottom: 0; opacity: 0;}
+      }
 
-@keyframes fadeout {
-    from {bottom: 30px; opacity: 1;}
-    to {bottom: 0; opacity: 0;}
-}
+      @keyframes fadeout {
+        from {bottom: 30px; opacity: 1;}
+        to {bottom: 0; opacity: 0;}
+      }
 
-body {
-	font-family:"Open Sans", Helvetica, Arial, sans-serif;
-	font-weight:300;
-	font-size: 12px;
-	line-height:30px;
-	color:#777;
-}
-      
+      body {
+	    font-family:"Open Sans", Helvetica, Arial, sans-serif;
+	    font-weight: 300;
+	    font-size: 12px;
+	    line-height: 30px;
+	    color: #777;
+      }
     </style>
   </head>
   <body id=pageBody>
@@ -123,9 +140,9 @@ body {
           <a href="#about" class="mdl-tabs__tab">About</a>
 	  <a href="#settings" class="mdl-tabs__tab">Settings</a>
         </div>
-      
+
         <div class="mdl-tabs__panel is-active" id="agenda">
-          <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable"> 
+          <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable">
             <thead>
               <tr>
                 <th class="mdl-data-table__cell--non-numeric">Class</th>
@@ -136,17 +153,17 @@ body {
             </thead>
             <tbody id="classes"></tbody>
           </table>
-	
+
 	<div id="rowBtn">
 	<button id=btnAdd class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
   	<i class="material-icons">add</i>
 	</button>
-	</div>	
-		
+	</div>
+
 	 <!-- Simple MDL Progress Bar -->
-	<div id="p1" class="mdl-progress mdl-js-progress"></div>	
-        </div>     
-	      
+	<div id="p1" class="mdl-progress mdl-js-progress"></div>
+        </div>
+
         <div class="mdl-tabs__panel" id="about">
           <span class="mdl-layout-title">Agenda</span>
           <br>
@@ -164,15 +181,15 @@ body {
     	James Fenn
   	</span>
   	</li>
-	<br>	
+	<br>
 	<!-- Contact Chip | Version number -->
 	<span class="mdl-chip mdl-chip--contact">
   	<span class="mdl-chip__contact mdl-color--blue mdl-color-text--white">v</span>
    	<span class="mdl-chip__text">Beta 0.5</span>
 	</span>
-		
+
 	</div>
-	   
+
 	<div class="mdl-tabs__panel" id="notes">
 		<span class="mdl-layout-title">Notes</span>
 		<br>
@@ -182,7 +199,7 @@ body {
 		<br>
 		<img src="notes_concept.png">
 	</div>
-	      
+
 	<div class="mdl-tabs__panel" id="settings">
 	  <span class="mdl-layout-title">Settings</span>
 	  <br>
@@ -196,9 +213,9 @@ body {
 	  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="resetWarning()">Reset</button>
 	  <br>
 	</div>
-	      
+
        </div>
-	    
+
       <div id="edit" style="display: none;">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
           <input class="mdl-textfield__input" type="text" id="name">
@@ -282,8 +299,8 @@ body {
       room: 0,
       homework: ""
     }
-  ];  
-	   
+  ];
+
   function loadClasses() {
     if (typeof(Storage) !== "undefined") {
       var stored = localStorage.getItem("classes");
@@ -294,12 +311,12 @@ body {
     classes.forEach(function(item, index, array) {
       HTML += getTableItem(item);
     });
-	  
+
     var element = document.getElementById("classes");
     element.innerHTML = HTML;
     componentHandler.upgradeElement(element);
-  }	  
-	  
+  }
+
  /* function bgChange(){
   	document.body.style.background = ;
   }  */
@@ -307,12 +324,12 @@ body {
   function resetWarning(){
 	if (confirm('Are you sure you want to delete all existing data from Agenda?\nThis will delete ALL user input!')) {
     		// Delete it!
-	} 
+	}
 	else {
     		// Do nothing!
 	}
   }
-	  
+
   function getTableItem(item) {
     return "<tr ondblclick=\"edit(classes[" + classes.indexOf(item) + "]);\"><td class=\"mdl-data-table__cell--non-numeric\">" + item.name + "</td><td class=\"mdl-data-table__cell--non-numeric\">" + item.teacher + "</td><td>" + item.room + "</td><td class=\"mdl-data-table__cell--non-numeric\">" + item.homework + "</td></tr>";
   }
